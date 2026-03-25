@@ -1,0 +1,288 @@
+/* AIX Center — SUNY Polytechnic Institute
+   Artificial Intelligence Exploration Center
+   ----------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy:      #002D62;
+  --navy-mid:  #152E52;
+  --navy-light:#1a3a6e;
+  --gold:      #F4B942;
+  --gold-dark: #d9a030;
+  --text:      #0D1B2A;
+  --muted:     #4B5563;
+  --border:    #D1D5DB;
+  --surf:      #F9FAFB;
+  --white:     #FFFFFF;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--surf);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+#site-header {
+  background: var(--navy);
+  padding: 0 40px;
+  flex-shrink: 0;
+  border-bottom: 4px solid var(--gold);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0 14px;
+}
+
+.aix-wordmark {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.header-text {
+  border-left: 2px solid rgba(255,255,255,0.2);
+  padding-left: 20px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.header-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 2px;
+}
+
+/* ── NAV ── */
+#site-nav {
+  background: var(--navy-mid);
+  padding: 0 40px;
+}
+
+#site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+#site-nav ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+#site-nav ul li a:hover,
+#site-nav ul li a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 span { color: var(--gold); }
+
+.hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  max-width: 640px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+
+.btn:hover { background: var(--gold-dark); }
+
+/* ── MAIN CONTENT ── */
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  width: 100%;
+}
+
+/* ── SECTION ── */
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+/* ── CARDS ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,45,98,0.12);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+}
+
+.card a:hover { color: var(--gold-dark); }
+
+/* ── PROJECT TABLE (projects/index.html) ── */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-table th {
+  background: var(--navy);
+  color: var(--gold);
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.project-table td {
+  padding: 14px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.project-table tr:last-child td { border-bottom: none; }
+
+.project-table tr:hover td { background: #f0f4ff; }
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #e6f0ff;
+  color: var(--navy);
+  margin: 2px 2px 0 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-active   { background: #dcfce7; color: #166534; }
+.status-planning { background: #fef9c3; color: #854d0e; }
+.status-complete { background: #e0e7ff; color: #3730a3; }
+
+/* ── FOOTER ── */
+#site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  padding: 24px 40px;
+  font-size: 13px;
+}
+
+#site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+#site-footer a:hover { text-decoration: underline; }
