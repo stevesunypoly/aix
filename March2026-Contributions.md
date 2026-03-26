@@ -72,4 +72,4 @@ The site updates automatically via GitHub Pages within a minute or two.
 
 ---
 
-*Questions? Contact [stevesuny@gmail.com](mailto:stevesuny@gmail.com)*
+*Questions? Open a GitHub Issue in the repo.*
